@@ -1,8 +1,10 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Root from '../root';
+import Loader from '..';
+
+jest.mock('../ripple.svg', () => 'ripple.svg');
 
 it('renders correctly', () => {
-  const tree = renderer.create(<Root />).toJSON();
+  const tree = renderer.create(<Loader />).toJSON();
   expect(tree).toMatchSnapshot();
 });

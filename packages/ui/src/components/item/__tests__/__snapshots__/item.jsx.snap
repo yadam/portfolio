@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item Container gets a comic 1`] = `
+<Item
+  alt="Test alt"
+  id="TestId"
+  image="TestImageUrl"
+  loading={false}
+  title="TestTitle"
+/>
+`;
+
+exports[`Item Container renders correctly 1`] = `
+<Item
+  loading={true}
+/>
+`;
