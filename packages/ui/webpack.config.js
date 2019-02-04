@@ -5,19 +5,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development', // FIXME: Make this dynamic
   entry: {
-    main: './packages/ui/src/index.jsx',
-    // api: './packages/api/src/index.js',
+    main: './src/index.jsx',
   },
   devServer: {
     compress: true,
-    contentBase: path.join(__dirname, './packages/ui/public'),
+    contentBase: path.join(__dirname, './public'),
     port: 8080,
   },
   plugins: [
     new CleanWebpackPlugin(['build']),
     new HtmlWebpackPlugin({
       inject: true,
-      template: './packages/ui/public/index.html',
+      template: './public/index.html',
     }),
   ],
   resolve: {
@@ -32,6 +31,7 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-env', '@babel/preset-react'],
+            plugins: ['@babel/plugin-transform-runtime'],
           },
         },
       },
