@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Item renders correctly when finished loading 1`] = `
+<div
+  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+>
+  <div
+    className="MuiCardContent-root-31"
+  >
+    <p
+      className="MuiTypography-root-32 MuiTypography-subtitle2-51 MuiTypography-paragraph-60"
+    >
+      TestTitle
+    </p>
+    <div
+      className="MuiCardMedia-root-68 Item-media-2 test media className"
+      style={
+        Object {
+          "backgroundImage": "url(\\"TestImageUrl\\")",
+        }
+      }
+      title="Test alt"
+    />
+    <h3
+      className="MuiTypography-root-32 MuiTypography-h3-46"
+    >
+      <span
+        aria-label="That's Funny!"
+        role="img"
+      >
+        😆
+      </span>
+    </h3>
+    <h3
+      className="MuiTypography-root-32 MuiTypography-h3-46"
+    >
+      <span
+        aria-label="Meh..."
+        role="img"
+      >
+        😒
+      </span>
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Item renders correctly when loading 1`] = `
+<div
+  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+>
+  <div
+    className="MuiCardContent-root-31"
+  >
+    <Loader />
+  </div>
+</div>
+`;
+
+exports[`Item renders correctly when marked funny 1`] = `
+<div
+  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+>
+  <div
+    className="MuiCardContent-root-31"
+  >
+    <p
+      className="MuiTypography-root-32 MuiTypography-subtitle2-51 MuiTypography-paragraph-60"
+    >
+      TestTitle
+    </p>
+    <div
+      className="MuiCardMedia-root-68 Item-media-2 test media className"
+      style={
+        Object {
+          "backgroundImage": "url(\\"TestImageUrl\\")",
+        }
+      }
+      title="Test alt"
+    />
+    <h3
+      className="MuiTypography-root-32 MuiTypography-h3-46"
+    >
+      <span
+        aria-label="That's Funny!"
+        role="img"
+      >
+        😆
+      </span>
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`Item renders correctly when marked not funny 1`] = `
+<div
+  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+>
+  <div
+    className="MuiCardContent-root-31"
+  >
+    <p
+      className="MuiTypography-root-32 MuiTypography-subtitle2-51 MuiTypography-paragraph-60"
+    >
+      TestTitle
+    </p>
+    <div
+      className="MuiCardMedia-root-68 Item-media-2 test media className"
+      style={
+        Object {
+          "backgroundImage": "url(\\"TestImageUrl\\")",
+        }
+      }
+      title="Test alt"
+    />
+    <h3
+      className="MuiTypography-root-32 MuiTypography-h3-46"
+    >
+      <span
+        aria-label="Meh..."
+        role="img"
+      >
+        😒
+      </span>
+    </h3>
+  </div>
+</div>
+`;
