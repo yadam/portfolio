@@ -1,28 +1,37 @@
 import axios from 'axios';
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import Item from './component';
 
-export default class ItemContainer extends PureComponent {
+export default class ItemContainer extends Component {
   constructor() {
     super();
     this.state = {
       alt: undefined,
       id: undefined,
       image: undefined,
-      isFunny: undefined,
+      reaction: undefined,
       loading: true,
       title: undefined,
     };
+
+    this.sendReaction = this.sendReaction.bind(this);
   }
 
   componentDidMount() {
-    axios.get('https://xkcd.com/info.0.json').then(response => {
-      const { alt, img: image, num: id, safe_title: title } = response;
+    axios.get('http://localhost:3000/comics').then(response => {
+      const { alt, id, image, title } = response.data;
       this.setState({ alt, id, image, loading: false, title });
     });
   }
 
+  sendReaction(event, reaction) {
+    const { id } = this.state;
+    axios.post(`http://localhost:3000/comics/${id}`, { reaction }).then(() => {
+      this.setState({ reaction });
+    });
+  }
+
   render() {
-    return <Item {...this.state} />;
+    return <Item {...this.state} onChange={this.sendReaction} />;
   }
 }

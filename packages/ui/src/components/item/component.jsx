@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import Buttons from '../buttons';
 import Loader from '../loader';
 
-function Item({ alt, classes, id, isFunny, image, loading, title }) {
+function Item({ alt, classes, id, image, loading, onChange, reaction, title }) {
   if (loading) {
     return (
       <Card key={id} className={classes.card}>
@@ -17,42 +18,39 @@ function Item({ alt, classes, id, isFunny, image, loading, title }) {
   return (
     <Card key={id} className={classes.card}>
       <CardContent>
-        <Typography paragraph variant="subtitle2">
+        <Typography paragraph variant="h6">
           {title}
         </Typography>
-        <CardMedia className={classes.media} image={image} title={alt} />
-        {(isFunny === undefined || isFunny) && (
-          <Typography variant="h3">
-            <span role="img" aria-label="That's Funny!">
-              😆
-            </span>
-          </Typography>
-        )}
-        {!isFunny && (
-          <Typography variant="h3">
-            <span role="img" aria-label="Meh...">
-              😒
-            </span>
-          </Typography>
-        )}
+        <CardMedia
+          component="img"
+          className={classes.media}
+          image={image}
+          title={alt}
+        />
+        <Buttons reaction={reaction} onChange={onChange} />
       </CardContent>
     </Card>
   );
 }
 
 Item.propTypes = {
-  alt: PropTypes.string.isRequired,
+  alt: PropTypes.string,
   classes: PropTypes.shape({ card: PropTypes.string, media: PropTypes.string })
     .isRequired,
-  id: PropTypes.string.isRequired,
-  isFunny: PropTypes.bool,
-  image: PropTypes.string.isRequired,
+  id: PropTypes.number,
+  image: PropTypes.string,
+  reaction: PropTypes.string,
   loading: PropTypes.bool.isRequired,
-  title: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  title: PropTypes.string,
 };
 
 Item.defaultProps = {
-  isFunny: undefined,
+  alt: undefined,
+  id: undefined,
+  image: undefined,
+  reaction: undefined,
+  title: undefined,
 };
 
 export default withStyles({
@@ -60,7 +58,7 @@ export default withStyles({
     maxWidth: 400,
   },
   media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+    objectFit: 'contain',
+    marginBottom: '1rem',
   },
 })(Item);

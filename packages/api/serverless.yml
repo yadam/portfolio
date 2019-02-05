@@ -1,0 +1,44 @@
+service: portfolio
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  stage: dev
+  region: us-east-1
+  profile: serverless
+
+functions:
+  comics:
+    handler: index.get
+    events:
+      - http:
+          method: get
+          path: 'comics'
+          cors: true
+      - http:
+          method: get
+          path: 'comics/{id}'
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: false
+  reactions:
+    handler: index.post
+    events:
+      - http:
+          method: post
+          path: 'comics/{id}'
+          cors: true
+          request:
+            parameters:
+              paths:
+                id: true
+
+custom:
+  webpack:
+    packager: 'yarn'
+
+plugins:
+  - serverless-webpack
+  - serverless-offline

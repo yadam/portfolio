@@ -16,11 +16,19 @@ describe('Item Container', () => {
       () =>
         new Promise(resolve => {
           resolve({
-            alt: 'Test alt',
-            num: 'TestId',
-            img: 'TestImageUrl',
-            safe_title: 'TestTitle',
+            data: {
+              alt: 'Test alt',
+              id: 123456,
+              image: 'TestImageUrl',
+              title: 'TestTitle',
+            },
           });
+        }),
+    );
+    axios.post = jest.fn(
+      () =>
+        new Promise(resolve => {
+          resolve({ data: { result: 'ok' } });
         }),
     );
   });
@@ -33,6 +41,12 @@ describe('Item Container', () => {
   it('gets a comic', async () => {
     const tree = renderer.create(<ItemContainer {...mockProps} />);
     await tree.root.instance.componentDidMount();
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('sends a reaction', async () => {
+    const tree = renderer.create(<ItemContainer {...mockProps} />);
+    await tree.root.instance.sendReaction(undefined, 'funny');
     expect(tree).toMatchSnapshot();
   });
 });

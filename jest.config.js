@@ -6,5 +6,6 @@ module.exports = {
     '!**/*.config.js',
     '!**/node_modules/**',
     '!**/coverage/**',
+    '!**/build/**',
   ],
 };
