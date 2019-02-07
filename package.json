@@ -8,6 +8,7 @@
     "clean:children": "yarn workspaces run clean",
     "clean:parent": "npx rimraf node_modules",
     "clean": "npm-run-all clean:children clean:parent",
+    "lint": "eslint .",
     "start": "npm-run-all --parallel start:api start:ui",
     "start:api": "yarn workspace api run start",
     "start:ui": "yarn workspace ui run start",

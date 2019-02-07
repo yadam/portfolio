@@ -19,6 +19,7 @@ exports[`Item renders correctly when finished loading 1`] = `
     />
     <Buttons
       onChange={[MockFunction]}
+      reaction=""
     />
   </div>
 </div>

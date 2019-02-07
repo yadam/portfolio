@@ -34,23 +34,15 @@ function Item({ alt, classes, id, image, loading, onChange, reaction, title }) {
 }
 
 Item.propTypes = {
-  alt: PropTypes.string,
+  alt: PropTypes.string.isRequired,
   classes: PropTypes.shape({ card: PropTypes.string, media: PropTypes.string })
     .isRequired,
-  id: PropTypes.number,
-  image: PropTypes.string,
-  reaction: PropTypes.string,
+  id: PropTypes.number.isRequired,
+  image: PropTypes.string.isRequired,
+  reaction: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   onChange: PropTypes.func.isRequired,
-  title: PropTypes.string,
-};
-
-Item.defaultProps = {
-  alt: undefined,
-  id: undefined,
-  image: undefined,
-  reaction: undefined,
-  title: undefined,
+  title: PropTypes.string.isRequired,
 };
 
 export default withStyles({

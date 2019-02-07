@@ -7,14 +7,20 @@ exports[`Item Container gets a comic 1`] = `
   image="TestImageUrl"
   loading={false}
   onChange={[Function]}
+  reaction=""
   title="TestTitle"
 />
 `;
 
 exports[`Item Container renders correctly 1`] = `
 <Item
+  alt=""
+  id={0}
+  image=""
   loading={true}
   onChange={[Function]}
+  reaction=""
+  title=""
 />
 `;
 

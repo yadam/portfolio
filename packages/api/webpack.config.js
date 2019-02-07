@@ -17,7 +17,8 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            configFile: path.resolve(__dirname, '../..', 'babel.config.js'),
+            cacheDirectory: true,
           },
         },
       },

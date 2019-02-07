@@ -6,12 +6,12 @@ export default class ItemContainer extends Component {
   constructor() {
     super();
     this.state = {
-      alt: undefined,
-      id: undefined,
-      image: undefined,
-      reaction: undefined,
+      alt: '',
+      id: 0,
+      image: '',
+      reaction: '',
       loading: true,
-      title: undefined,
+      title: '',
     };
 
     this.sendReaction = this.sendReaction.bind(this);

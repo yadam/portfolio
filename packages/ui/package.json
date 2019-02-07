@@ -6,7 +6,7 @@
   "main": "index.jsx",
   "scripts": {
     "clean": "npx rimraf node_modules",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --watch",
     "test": "jest",
     "test:watch": "jest --watch"
   },

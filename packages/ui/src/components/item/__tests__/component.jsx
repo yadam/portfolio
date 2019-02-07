@@ -16,13 +16,18 @@ describe('Item', () => {
       image: 'TestImageUrl',
       loading: false,
       onChange: jest.fn(),
-      reaction: undefined,
+      reaction: '',
       title: 'TestTitle',
     };
   });
 
   it('renders correctly when loading', () => {
+    mockProps.alt = '';
+    mockProps.id = 0;
+    mockProps.image = '';
     mockProps.loading = true;
+    mockProps.reaction = '';
+    mockProps.title = '';
     const tree = renderer.create(<Item {...mockProps} />).toJSON();
     expect(tree).toMatchSnapshot();
   });

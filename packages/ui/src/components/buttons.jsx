@@ -13,20 +13,14 @@ function Buttons({ classes, reaction, onChange }) {
       selected
       value={reaction}
     >
-      <ToggleButton
-        value="funny"
-        className={`${classes.button} ${classes.buttonGroup}`}
-      >
+      <ToggleButton value="funny" className={classes.button}>
         <Typography className={classes.faces} variant="h3">
           <span role="img" aria-label="That's Funny!">
             😆
           </span>
         </Typography>
       </ToggleButton>
-      <ToggleButton
-        value="meh"
-        className={`${classes.button} ${classes.buttonGroup}`}
-      >
+      <ToggleButton value="meh" className={classes.button}>
         <Typography className={classes.faces} variant="h3">
           <span role="img" aria-label="Meh...">
             😒
@@ -38,8 +32,11 @@ function Buttons({ classes, reaction, onChange }) {
 }
 
 Buttons.propTypes = {
-  classes: PropTypes.shape({ card: PropTypes.string, media: PropTypes.string })
-    .isRequired,
+  classes: PropTypes.shape({
+    button: PropTypes.string,
+    buttonGroup: PropTypes.string,
+    faces: PropTypes.string,
+  }).isRequired,
   reaction: PropTypes.string,
   onChange: PropTypes.func.isRequired,
 };
@@ -50,10 +47,13 @@ Buttons.defaultProps = {
 
 export default withStyles({
   button: {
+    height: '9rem',
     padding: '3rem',
   },
   buttonGroup: {
     height: '9rem',
+    width: '18.8rem',
+    margin: '0 auto',
   },
   faces: {
     height: '3rem',
