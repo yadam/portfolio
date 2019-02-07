@@ -29,12 +29,12 @@
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
-    "jest": "^24.0.0",
+    "jest": "^24.1.0",
     "prettier": "^1.16.4",
-    "serverless": "^1.36.3",
-    "serverless-offline": "^4.2.1",
+    "serverless": "^1.37.0",
+    "serverless-offline": "^4.2.2",
     "serverless-webpack": "^5.2.0",
-    "webpack": "^4.29.1"
+    "webpack": "^4.29.3"
   },
   "dependencies": {
     "axios": "^0.18.0"
