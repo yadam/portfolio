@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "npx rimraf node_modules",
+    "start": "serverless offline start",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -19,12 +20,23 @@
     "url": "https://github.com/yadam/portfolio/issues"
   },
   "homepage": "https://github.com/yadam/portfolio#readme",
-  "browserslist": "last 2 version, Firefox ESR, > .5%, node 8, not dead",
+  "browserslist": "node 8",
   "devDependencies": {
     "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
     "babel-eslint": "^10.0.1",
-    "jest": "^24.0.0"
+    "babel-jest": "^24.1.0",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^1.0.1",
+    "jest": "^24.0.0",
+    "prettier": "^1.16.4",
+    "serverless": "^1.36.3",
+    "serverless-offline": "^4.2.1",
+    "serverless-webpack": "^5.2.0",
+    "webpack": "^4.29.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }

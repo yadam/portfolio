@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Buttons renders correctly when a funny reaction has been recorded 1`] = `
+<div
+  className="MuiToggleButtonGroup-root-4 MuiToggleButtonGroup-selected-5 Buttons-buttonGroup-2"
+>
+  <button
+    className="MuiButtonBase-root-10 MuiToggleButton-root-6 MuiToggleButton-selected-8 Buttons-button-1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+    value="funny"
+  >
+    <span
+      className="MuiToggleButton-label-9"
+    >
+      <h3
+        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+      >
+        <span
+          aria-label="That's Funny!"
+          role="img"
+        >
+          😆
+        </span>
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-49"
+    />
+  </button>
+  <button
+    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+    value="meh"
+  >
+    <span
+      className="MuiToggleButton-label-9"
+    >
+      <h3
+        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+      >
+        <span
+          aria-label="Meh..."
+          role="img"
+        >
+          😒
+        </span>
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-49"
+    />
+  </button>
+</div>
+`;
+
+exports[`Buttons renders correctly when a meh reaction has been recorded 1`] = `
+<div
+  className="MuiToggleButtonGroup-root-4 MuiToggleButtonGroup-selected-5 Buttons-buttonGroup-2"
+>
+  <button
+    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+    value="funny"
+  >
+    <span
+      className="MuiToggleButton-label-9"
+    >
+      <h3
+        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+      >
+        <span
+          aria-label="That's Funny!"
+          role="img"
+        >
+          😆
+        </span>
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-49"
+    />
+  </button>
+  <button
+    className="MuiButtonBase-root-10 MuiToggleButton-root-6 MuiToggleButton-selected-8 Buttons-button-1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+    value="meh"
+  >
+    <span
+      className="MuiToggleButton-label-9"
+    >
+      <h3
+        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+      >
+        <span
+          aria-label="Meh..."
+          role="img"
+        >
+          😒
+        </span>
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-49"
+    />
+  </button>
+</div>
+`;
+
+exports[`Buttons renders correctly when no reaction has been recorded 1`] = `
+<div
+  className="MuiToggleButtonGroup-root-4 MuiToggleButtonGroup-selected-5 Buttons-buttonGroup-2"
+>
+  <button
+    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+    value="funny"
+  >
+    <span
+      className="MuiToggleButton-label-9"
+    >
+      <h3
+        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+      >
+        <span
+          aria-label="That's Funny!"
+          role="img"
+        >
+          😆
+        </span>
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-49"
+    />
+  </button>
+  <button
+    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    disabled={false}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[Function]}
+    onContextMenu={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex="0"
+    type="button"
+    value="meh"
+  >
+    <span
+      className="MuiToggleButton-label-9"
+    >
+      <h3
+        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+      >
+        <span
+          aria-label="Meh..."
+          role="img"
+        >
+          😒
+        </span>
+      </h3>
+    </span>
+    <span
+      className="MuiTouchRipple-root-49"
+    />
+  </button>
+</div>
+`;

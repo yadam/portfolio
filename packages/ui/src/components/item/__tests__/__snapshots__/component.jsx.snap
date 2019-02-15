@@ -8,39 +8,19 @@ exports[`Item renders correctly when finished loading 1`] = `
     className="MuiCardContent-root-31"
   >
     <p
-      className="MuiTypography-root-32 MuiTypography-subtitle2-51 MuiTypography-paragraph-60"
+      className="MuiTypography-root-32 MuiTypography-h6-49 MuiTypography-paragraph-60"
     >
       TestTitle
     </p>
-    <div
-      className="MuiCardMedia-root-68 Item-media-2 test media className"
-      style={
-        Object {
-          "backgroundImage": "url(\\"TestImageUrl\\")",
-        }
-      }
+    <img
+      className="MuiCardMedia-root-68 MuiCardMedia-media-69 Item-media-2 test media className"
+      src="TestImageUrl"
       title="Test alt"
     />
-    <h3
-      className="MuiTypography-root-32 MuiTypography-h3-46"
-    >
-      <span
-        aria-label="That's Funny!"
-        role="img"
-      >
-        😆
-      </span>
-    </h3>
-    <h3
-      className="MuiTypography-root-32 MuiTypography-h3-46"
-    >
-      <span
-        aria-label="Meh..."
-        role="img"
-      >
-        😒
-      </span>
-    </h3>
+    <Buttons
+      onChange={[MockFunction]}
+      reaction=""
+    />
   </div>
 </div>
 `;
@@ -65,29 +45,19 @@ exports[`Item renders correctly when marked funny 1`] = `
     className="MuiCardContent-root-31"
   >
     <p
-      className="MuiTypography-root-32 MuiTypography-subtitle2-51 MuiTypography-paragraph-60"
+      className="MuiTypography-root-32 MuiTypography-h6-49 MuiTypography-paragraph-60"
     >
       TestTitle
     </p>
-    <div
-      className="MuiCardMedia-root-68 Item-media-2 test media className"
-      style={
-        Object {
-          "backgroundImage": "url(\\"TestImageUrl\\")",
-        }
-      }
+    <img
+      className="MuiCardMedia-root-68 MuiCardMedia-media-69 Item-media-2 test media className"
+      src="TestImageUrl"
       title="Test alt"
     />
-    <h3
-      className="MuiTypography-root-32 MuiTypography-h3-46"
-    >
-      <span
-        aria-label="That's Funny!"
-        role="img"
-      >
-        😆
-      </span>
-    </h3>
+    <Buttons
+      onChange={[MockFunction]}
+      reaction="funny"
+    />
   </div>
 </div>
 `;
@@ -100,29 +70,19 @@ exports[`Item renders correctly when marked not funny 1`] = `
     className="MuiCardContent-root-31"
   >
     <p
-      className="MuiTypography-root-32 MuiTypography-subtitle2-51 MuiTypography-paragraph-60"
+      className="MuiTypography-root-32 MuiTypography-h6-49 MuiTypography-paragraph-60"
     >
       TestTitle
     </p>
-    <div
-      className="MuiCardMedia-root-68 Item-media-2 test media className"
-      style={
-        Object {
-          "backgroundImage": "url(\\"TestImageUrl\\")",
-        }
-      }
+    <img
+      className="MuiCardMedia-root-68 MuiCardMedia-media-69 Item-media-2 test media className"
+      src="TestImageUrl"
       title="Test alt"
     />
-    <h3
-      className="MuiTypography-root-32 MuiTypography-h3-46"
-    >
-      <span
-        aria-label="Meh..."
-        role="img"
-      >
-        😒
-      </span>
-    </h3>
+    <Buttons
+      onChange={[MockFunction]}
+      reaction="meh"
+    />
   </div>
 </div>
 `;

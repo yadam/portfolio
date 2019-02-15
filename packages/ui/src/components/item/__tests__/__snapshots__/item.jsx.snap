@@ -3,15 +3,35 @@
 exports[`Item Container gets a comic 1`] = `
 <Item
   alt="Test alt"
-  id="TestId"
+  id={123456}
   image="TestImageUrl"
   loading={false}
+  onChange={[Function]}
+  reaction=""
   title="TestTitle"
 />
 `;
 
 exports[`Item Container renders correctly 1`] = `
 <Item
+  alt=""
+  id={0}
+  image=""
   loading={true}
+  onChange={[Function]}
+  reaction=""
+  title=""
+/>
+`;
+
+exports[`Item Container sends a reaction 1`] = `
+<Item
+  alt="Test alt"
+  id={123456}
+  image="TestImageUrl"
+  loading={false}
+  onChange={[Function]}
+  reaction="funny"
+  title="TestTitle"
 />
 `;
