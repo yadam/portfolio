@@ -6,6 +6,20 @@ provider:
   stage: dev
   region: us-east-1
   profile: serverless
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        - { 'Fn::GetAtt': ['ReactionsDynamoDBTable', 'Arn'] }
+        # - arn:aws:dynamodb:us-east-1::table/reactions-dev
+  environment:
+    REACTIONS_TABLE: ${self:custom.reactionTableName}
 
 functions:
   comics:
@@ -35,10 +49,35 @@ functions:
               paths:
                 id: true
 
+resources:
+  Resources:
+    ReactionsDynamoDBTable:
+      Type: 'AWS::DynamoDB::Table'
+      Properties:
+        AttributeDefinitions:
+          - AttributeName: comicId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: comicId
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:custom.reactionTableName}
+
 custom:
+  reactionTableName: 'reactions-${self:provider.stage}'
+  dynamodb:
+    # If you only want to use DynamoDB Local in some stages, declare them here
+    stages:
+      - dev
+    start:
+      inMemory: true
+      migrate: true
   webpack:
     packager: 'yarn'
 
 plugins:
   - serverless-webpack
+  - serverless-dynamodb-local
   - serverless-offline
