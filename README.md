@@ -59,6 +59,8 @@ My name is Adam. Hopefully if you've gotten this far you found this site from my
   - [ ] Add an API endpoint to fetch all of the reactions from the database
   - [ ] Add gauge component
 - [ ] Refactor to React Hooks where appropriate
+- [ ] Add code coverage reporter (codecov)
+- [ ] Add dependency up-to-date reporter (greenkeeper)
 - [ ] Add support for SSR
   - [ ] Add feature toggle to enable/disable SSR on the fly
   - [ ] Add next.js support and refactor
