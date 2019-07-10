@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "npx rimraf node_modules",
+    "db:reinstall": "sls dynamodb remove && sls dynamodb install --localPath ./bin",
     "start": "serverless offline start",
+    "start:debug": "export SLS_DEBUG=* && serverless offline start",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -25,18 +27,24 @@
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
+    "aws-sdk-mock": "^4.3.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^24.1.0",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^1.0.1",
-    "jest": "^24.0.0",
+    "jest": "^24.1.0",
     "prettier": "^1.16.4",
-    "serverless": "^1.36.3",
-    "serverless-offline": "^4.2.1",
+    "serverless": "^1.37.0",
+    "serverless-dynamodb-local": "^0.2.36",
+    "serverless-offline": "^4.2.2",
     "serverless-webpack": "^5.2.0",
-    "webpack": "^4.29.1"
+    "webpack": "^4.29.3"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "aws-sdk": "^2.398.0",
+    "axios": "^0.18.0",
+    "convict": "^4.4.1",
+    "serverless-dynamodb-client": "^0.0.2"
   }
 }

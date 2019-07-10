@@ -1,7 +1,10 @@
 import axios from 'axios';
+import AWS from 'aws-sdk';
+import AWSMock from 'aws-sdk-mock';
 import * as app from '..';
 
 jest.mock('axios');
+AWSMock.setSDKInstance(AWS);
 
 let getData;
 
@@ -13,7 +16,7 @@ describe('API', () => {
       getData = {
         data: {
           alt: 'Test alt',
-          num: 123456,
+          num: '123456',
           img: 'TestImageUrl',
           safe_title: 'TestTitle',
         },
@@ -63,13 +66,93 @@ describe('API', () => {
   });
 
   describe('post', () => {
-    it('receives reactions', async () => {
+    afterEach(() => {
+      /* eslint-disable-next-line no-underscore-dangle */
+      app._resetDB();
+      process.env.IS_OFFLINE = '';
+      AWSMock.restore();
+    });
+
+    it('configures the database in offline mode', async () => {
+      process.env.IS_OFFLINE = true;
+      AWSMock.mock('DynamoDB', 'putItem', (params, callback) => {
+        callback(null, 'successfully put item in database');
+      });
       const cb = jest.fn();
-      const event = { body: JSON.stringify({ reaction: 'funny' }) };
+      const event = {
+        pathParameters: { id: getData.data.num },
+        body: JSON.stringify({ reaction: 'funny' }),
+      };
       await app.post(event, null, cb);
       expect(cb).toHaveBeenCalledTimes(1);
       expect(cb.mock.calls[0][1].statusCode).toEqual(200);
-      expect(JSON.parse(cb.mock.calls[0][1].body)).toEqual({ result: 'ok' });
+      expect(JSON.parse(cb.mock.calls[0][1].body)).toEqual({
+        result: 'ok',
+        response: 'successfully put item in database',
+      });
+    });
+
+    it('receives reactions', async () => {
+      AWSMock.mock('DynamoDB', 'putItem', (params, callback) => {
+        callback(null, 'successfully put item in database');
+      });
+      const cb = jest.fn();
+      const event = {
+        pathParameters: { id: getData.data.num },
+        body: JSON.stringify({ reaction: 'funny' }),
+      };
+      await app.post(event, null, cb);
+      expect(cb).toHaveBeenCalledTimes(1);
+      expect(cb.mock.calls[0][1].statusCode).toEqual(200);
+      expect(JSON.parse(cb.mock.calls[0][1].body)).toEqual({
+        result: 'ok',
+        response: 'successfully put item in database',
+      });
+    });
+
+    it('handles database errors', async () => {
+      AWSMock.mock('DynamoDB', 'putItem', (params, callback) => {
+        callback('an error occurred.');
+      });
+      const cb = jest.fn();
+      const event = {
+        pathParameters: { id: getData.data.num },
+        body: JSON.stringify({ reaction: 'funny' }),
+      };
+      await app.post(event, null, cb);
+      expect(cb).toHaveBeenCalledTimes(1);
+      expect(cb.mock.calls[0][1].statusCode).toEqual(400);
+      expect(JSON.parse(cb.mock.calls[0][1].body)).toEqual({
+        error: 'an error occurred.',
+        result: 'error',
+      });
+    });
+
+    it('consecutive post calls reuse the same db instance', async () => {
+      AWSMock.mock('DynamoDB', 'putItem', (params, callback) => {
+        callback(null, 'successfully put item in database');
+      });
+      const cb = jest.fn();
+      const event = {
+        pathParameters: { id: getData.data.num },
+        body: JSON.stringify({ reaction: 'funny' }),
+      };
+
+      await app.post(event, null, cb);
+      expect(cb).toHaveBeenCalledTimes(1);
+      expect(cb.mock.calls[0][1].statusCode).toEqual(200);
+      expect(JSON.parse(cb.mock.calls[0][1].body)).toEqual({
+        result: 'ok',
+        response: 'successfully put item in database',
+      });
+
+      await app.post(event, null, cb);
+      expect(cb).toHaveBeenCalledTimes(2);
+      expect(cb.mock.calls[1][1].statusCode).toEqual(200);
+      expect(JSON.parse(cb.mock.calls[1][1].body)).toEqual({
+        result: 'ok',
+        response: 'successfully put item in database',
+      });
     });
   });
 });
