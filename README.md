@@ -46,3 +46,22 @@ This project is intended for hiring managers and recruiters looking for examples
 ## Who am I?
 
 My name is Adam. Hopefully if you've gotten this far you found this site from my resume or social media accounts and you have all of the answers you need.
+
+## TODO
+
+- [ ] Load another random comic when the user reacts to the current comic
+  - [ ] Add Redux
+    - [ ] Store the most recent comic's ID for use as an upper bound for retrieving random comics in the future
+    - [ ] Store current list of comics
+  - [ ] Convert root page to contain a list of comics instead of a single one
+  - [ ] Trigger download of random comic when the current comic's reaction is recorded
+- [ ] Add a dashboard gauge to indicate the average funniness
+  - [ ] Add an API endpoint to fetch all of the reactions from the database
+  - [ ] Add gauge component
+- [ ] Refactor to React Hooks where appropriate
+- [ ] Add code coverage reporter (codecov)
+- [ ] Add dependency up-to-date reporter (greenkeeper)
+- [ ] Add support for SSR
+  - [ ] Add feature toggle to enable/disable SSR on the fly
+  - [ ] Add next.js support and refactor
+  - [ ] Add toggle component to flip feature toggle
