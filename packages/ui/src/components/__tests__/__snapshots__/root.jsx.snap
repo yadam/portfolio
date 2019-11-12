@@ -2,7 +2,7 @@
 
 exports[`Root renders correctly 1`] = `
 <div
-  className="MuiGrid-container-1 MuiGrid-spacing-xs-24-25 MuiGrid-justify-xs-space-around-21"
+  className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-10 MuiGrid-justify-xs-space-around"
 >
   <Item />
 </div>

@@ -2,15 +2,18 @@
 
 exports[`Buttons renders correctly when a funny reaction has been recorded 1`] = `
 <div
-  className="MuiToggleButtonGroup-root-4 MuiToggleButtonGroup-selected-5 Buttons-buttonGroup-2"
+  className="MuiToggleButtonGroup-root Buttons-buttonGroup-2"
+  role="group"
+  selected={true}
 >
   <button
-    className="MuiButtonBase-root-10 MuiToggleButton-root-6 MuiToggleButton-selected-8 Buttons-button-1"
+    aria-pressed={true}
+    className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Buttons-button-1 Mui-selected"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -20,15 +23,15 @@ exports[`Buttons renders correctly when a funny reaction has been recorded 1`] =
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex="0"
+    tabIndex={0}
     type="button"
     value="funny"
   >
     <span
-      className="MuiToggleButton-label-9"
+      className="MuiToggleButton-label"
     >
       <h3
-        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+        className="MuiTypography-root Buttons-faces-3 MuiTypography-h3"
       >
         <span
           aria-label="That's Funny!"
@@ -39,16 +42,17 @@ exports[`Buttons renders correctly when a funny reaction has been recorded 1`] =
       </h3>
     </span>
     <span
-      className="MuiTouchRipple-root-49"
+      className="MuiTouchRipple-root"
     />
   </button>
   <button
-    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    aria-pressed={false}
+    className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Buttons-button-1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -58,15 +62,15 @@ exports[`Buttons renders correctly when a funny reaction has been recorded 1`] =
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex="0"
+    tabIndex={0}
     type="button"
     value="meh"
   >
     <span
-      className="MuiToggleButton-label-9"
+      className="MuiToggleButton-label"
     >
       <h3
-        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+        className="MuiTypography-root Buttons-faces-3 MuiTypography-h3"
       >
         <span
           aria-label="Meh..."
@@ -77,7 +81,7 @@ exports[`Buttons renders correctly when a funny reaction has been recorded 1`] =
       </h3>
     </span>
     <span
-      className="MuiTouchRipple-root-49"
+      className="MuiTouchRipple-root"
     />
   </button>
 </div>
@@ -85,15 +89,18 @@ exports[`Buttons renders correctly when a funny reaction has been recorded 1`] =
 
 exports[`Buttons renders correctly when a meh reaction has been recorded 1`] = `
 <div
-  className="MuiToggleButtonGroup-root-4 MuiToggleButtonGroup-selected-5 Buttons-buttonGroup-2"
+  className="MuiToggleButtonGroup-root Buttons-buttonGroup-2"
+  role="group"
+  selected={true}
 >
   <button
-    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    aria-pressed={false}
+    className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Buttons-button-1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -103,15 +110,15 @@ exports[`Buttons renders correctly when a meh reaction has been recorded 1`] = `
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex="0"
+    tabIndex={0}
     type="button"
     value="funny"
   >
     <span
-      className="MuiToggleButton-label-9"
+      className="MuiToggleButton-label"
     >
       <h3
-        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+        className="MuiTypography-root Buttons-faces-3 MuiTypography-h3"
       >
         <span
           aria-label="That's Funny!"
@@ -121,17 +128,15 @@ exports[`Buttons renders correctly when a meh reaction has been recorded 1`] = `
         </span>
       </h3>
     </span>
-    <span
-      className="MuiTouchRipple-root-49"
-    />
   </button>
   <button
-    className="MuiButtonBase-root-10 MuiToggleButton-root-6 MuiToggleButton-selected-8 Buttons-button-1"
+    aria-pressed={true}
+    className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Buttons-button-1 Mui-selected"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -141,15 +146,15 @@ exports[`Buttons renders correctly when a meh reaction has been recorded 1`] = `
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex="0"
+    tabIndex={0}
     type="button"
     value="meh"
   >
     <span
-      className="MuiToggleButton-label-9"
+      className="MuiToggleButton-label"
     >
       <h3
-        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+        className="MuiTypography-root Buttons-faces-3 MuiTypography-h3"
       >
         <span
           aria-label="Meh..."
@@ -159,24 +164,24 @@ exports[`Buttons renders correctly when a meh reaction has been recorded 1`] = `
         </span>
       </h3>
     </span>
-    <span
-      className="MuiTouchRipple-root-49"
-    />
   </button>
 </div>
 `;
 
 exports[`Buttons renders correctly when no reaction has been recorded 1`] = `
 <div
-  className="MuiToggleButtonGroup-root-4 MuiToggleButtonGroup-selected-5 Buttons-buttonGroup-2"
+  className="MuiToggleButtonGroup-root Buttons-buttonGroup-2"
+  role="group"
+  selected={true}
 >
   <button
-    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    aria-pressed={false}
+    className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Buttons-button-1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -186,15 +191,15 @@ exports[`Buttons renders correctly when no reaction has been recorded 1`] = `
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex="0"
+    tabIndex={0}
     type="button"
     value="funny"
   >
     <span
-      className="MuiToggleButton-label-9"
+      className="MuiToggleButton-label"
     >
       <h3
-        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+        className="MuiTypography-root Buttons-faces-3 MuiTypography-h3"
       >
         <span
           aria-label="That's Funny!"
@@ -204,17 +209,15 @@ exports[`Buttons renders correctly when no reaction has been recorded 1`] = `
         </span>
       </h3>
     </span>
-    <span
-      className="MuiTouchRipple-root-49"
-    />
   </button>
   <button
-    className="MuiButtonBase-root-10 MuiToggleButton-root-6 Buttons-button-1"
+    aria-pressed={false}
+    className="MuiButtonBase-root MuiToggleButton-root MuiToggleButtonGroup-grouped Buttons-button-1"
     disabled={false}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[Function]}
-    onContextMenu={[Function]}
+    onDragLeave={[Function]}
     onFocus={[Function]}
     onKeyDown={[Function]}
     onKeyUp={[Function]}
@@ -224,15 +227,15 @@ exports[`Buttons renders correctly when no reaction has been recorded 1`] = `
     onTouchEnd={[Function]}
     onTouchMove={[Function]}
     onTouchStart={[Function]}
-    tabIndex="0"
+    tabIndex={0}
     type="button"
     value="meh"
   >
     <span
-      className="MuiToggleButton-label-9"
+      className="MuiToggleButton-label"
     >
       <h3
-        className="MuiTypography-root-13 MuiTypography-h3-27 Buttons-faces-3"
+        className="MuiTypography-root Buttons-faces-3 MuiTypography-h3"
       >
         <span
           aria-label="Meh..."
@@ -242,9 +245,6 @@ exports[`Buttons renders correctly when no reaction has been recorded 1`] = `
         </span>
       </h3>
     </span>
-    <span
-      className="MuiTouchRipple-root-49"
-    />
   </button>
 </div>
 `;
