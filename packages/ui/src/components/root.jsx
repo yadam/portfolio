@@ -7,7 +7,7 @@ export default function Root() {
   return (
     <>
       <CssBaseline />
-      <Grid container justify="space-around" spacing={24}>
+      <Grid container justify="space-around" spacing={10}>
         <Item />
       </Grid>
     </>

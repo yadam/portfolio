@@ -1,11 +1,11 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
 const slsw = require('serverless-webpack');
 
 module.exports = {
   mode: 'development', // FIXME: Make this dynamic
   entry: slsw.lib.entries,
-  plugins: [new CleanWebpackPlugin(['build'])],
+  plugins: [new CleanWebpackPlugin()],
   resolve: {
     extensions: ['*', '.js'],
   },

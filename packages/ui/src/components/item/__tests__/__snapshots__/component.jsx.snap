@@ -2,18 +2,18 @@
 
 exports[`Item renders correctly when finished loading 1`] = `
 <div
-  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
 >
   <div
-    className="MuiCardContent-root-31"
+    className="MuiCardContent-root"
   >
     <p
-      className="MuiTypography-root-32 MuiTypography-h6-49 MuiTypography-paragraph-60"
+      className="MuiTypography-root MuiTypography-h6 MuiTypography-paragraph"
     >
       TestTitle
     </p>
     <img
-      className="MuiCardMedia-root-68 MuiCardMedia-media-69 Item-media-2 test media className"
+      className="MuiCardMedia-root Item-media-2 test media className MuiCardMedia-media MuiCardMedia-img"
       src="TestImageUrl"
       title="Test alt"
     />
@@ -27,10 +27,10 @@ exports[`Item renders correctly when finished loading 1`] = `
 
 exports[`Item renders correctly when loading 1`] = `
 <div
-  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
 >
   <div
-    className="MuiCardContent-root-31"
+    className="MuiCardContent-root"
   >
     <Loader />
   </div>
@@ -39,18 +39,18 @@ exports[`Item renders correctly when loading 1`] = `
 
 exports[`Item renders correctly when marked funny 1`] = `
 <div
-  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
 >
   <div
-    className="MuiCardContent-root-31"
+    className="MuiCardContent-root"
   >
     <p
-      className="MuiTypography-root-32 MuiTypography-h6-49 MuiTypography-paragraph-60"
+      className="MuiTypography-root MuiTypography-h6 MuiTypography-paragraph"
     >
       TestTitle
     </p>
     <img
-      className="MuiCardMedia-root-68 MuiCardMedia-media-69 Item-media-2 test media className"
+      className="MuiCardMedia-root Item-media-2 test media className MuiCardMedia-media MuiCardMedia-img"
       src="TestImageUrl"
       title="Test alt"
     />
@@ -64,18 +64,18 @@ exports[`Item renders correctly when marked funny 1`] = `
 
 exports[`Item renders correctly when marked not funny 1`] = `
 <div
-  className="MuiPaper-root-4 MuiPaper-elevation1-7 MuiPaper-rounded-5 MuiCard-root-3 Item-card-1 test card className"
+  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
 >
   <div
-    className="MuiCardContent-root-31"
+    className="MuiCardContent-root"
   >
     <p
-      className="MuiTypography-root-32 MuiTypography-h6-49 MuiTypography-paragraph-60"
+      className="MuiTypography-root MuiTypography-h6 MuiTypography-paragraph"
     >
       TestTitle
     </p>
     <img
-      className="MuiCardMedia-root-68 MuiCardMedia-media-69 Item-media-2 test media className"
+      className="MuiCardMedia-root Item-media-2 test media className MuiCardMedia-media MuiCardMedia-img"
       src="TestImageUrl"
       title="Test alt"
     />

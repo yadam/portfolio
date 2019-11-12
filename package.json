@@ -7,13 +7,12 @@
   "scripts": {
     "clean:children": "yarn workspaces run clean",
     "clean:parent": "npx rimraf node_modules",
-    "clean": "npx npm-run-all clean:children clean:parent",
-    "lint": "eslint .",
+    "clean": "npm-run-all clean:children clean:parent",
+    "lint": "yarn workspaces run lint",
     "start": "npm-run-all --parallel start:api start:ui",
     "start:api": "yarn workspace api run start",
     "start:ui": "yarn workspace ui run start",
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "yarn workspaces run test"
   },
   "repository": {
     "type": "git",
@@ -25,20 +24,11 @@
     "url": "https://github.com/yadam/portfolio/issues"
   },
   "homepage": "https://github.com/yadam/portfolio#readme",
-  "browserslist": "last 2 version, Firefox ESR, > .5%, node 8, not dead",
   "workspaces": [
     "packages/*"
   ],
   "devDependencies": {
-    "eslint": "5.3.0",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.11.0",
-    "jest": "^24.1.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.16.4"
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {}
 }

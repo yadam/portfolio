@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="MuiCircularProgress-root-2 MuiCircularProgress-colorPrimary-5 MuiCircularProgress-indeterminate-4 Loader-root-1"
+  className="MuiCircularProgress-root Loader-root-1 MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
   role="progressbar"
   style={
     Object {
@@ -12,11 +12,11 @@ exports[`renders correctly 1`] = `
   }
 >
   <svg
-    className="MuiCircularProgress-svg-7"
+    className="MuiCircularProgress-svg"
     viewBox="22 22 44 44"
   >
     <circle
-      className="MuiCircularProgress-circle-8 MuiCircularProgress-circleIndeterminate-10"
+      className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
       cx={44}
       cy={44}
       fill="none"
