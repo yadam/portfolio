@@ -2,7 +2,7 @@
 
 exports[`Item renders correctly when finished loading 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root Item-card-1 test card className MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
@@ -27,7 +27,7 @@ exports[`Item renders correctly when finished loading 1`] = `
 
 exports[`Item renders correctly when loading 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root Item-card-1 test card className MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
@@ -39,7 +39,7 @@ exports[`Item renders correctly when loading 1`] = `
 
 exports[`Item renders correctly when marked funny 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root Item-card-1 test card className MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
@@ -64,7 +64,7 @@ exports[`Item renders correctly when marked funny 1`] = `
 
 exports[`Item renders correctly when marked not funny 1`] = `
 <div
-  className="MuiPaper-root MuiPaper-elevation1 MuiCard-root Item-card-1 test card className MuiPaper-rounded"
+  className="MuiPaper-root MuiCard-root Item-card-1 test card className MuiPaper-elevation1 MuiPaper-rounded"
 >
   <div
     className="MuiCardContent-root"
